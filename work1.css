@@ -1,0 +1,205 @@
+/* * stands for everything */
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #eff0f4;
+}
+
+.container{
+    position: relative;
+    left: -80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .drop{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    box-shadow: inset 20px 20px 20px rgba(0, 0, 0,0.05),
+    20px 25px 20px rgba(0, 0, 0,0.05),
+    20px 30px 30px rgba(0, 0, 0,0.05),
+    inset -20px -20px 25px rgba(255, 255, 255, 0.9);
+    justify-content: center;
+    border-radius: 52% 45% 33% 67% / 17% 45% 55% 62%;
+    transition: 0.5s;
+    align-items: center;
+}
+
+.container .drop:hover{
+    border-radius: 50%;
+}
+.container .drop::before{
+    content:"" ;
+    position: absolute;
+    top: 50px;
+    left: 85px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background:#fff;
+    opacity: 0.9;
+}
+.container .drop::after{
+    content: "";
+    position: absolute;
+    top:90px;
+    left: 110px;
+    width: 15px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.9;
+}
+
+.container .drop .content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+    gap: 15px;
+}
+
+.container .drop .content h1{
+    position: relative;
+    color: #333;
+    font-size: 1.5em;
+}
+
+.content .drop .content form{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+
+}
+/* this is styling the username and password column*/
+.container .drop .content form .inputs{
+    position: relative;
+    width: 225px;
+    box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.1),
+    -2px -5px 10px #ffffff,15px 15px 10px rgba(0, 0, 0,0.05),
+    15px 15px 10px rgba(0, 0, 0,0.025);
+    border-radius: 25px;
+}
+.container .drop .content form .inputs::before{
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 65%;
+    height: 5px;
+    background:rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    
+}
+
+/* thi is styling the buuton */
+.container .drop .content form .inputs input{
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1em;
+    width: 100%;
+    margin: auto;
+    padding: 10px 15px ;
+}
+.container .drop .content form .inputs input[type='submit']{
+    color:white;
+    text-transform: uppercase;
+    font-size: 1em;
+    cursor: pointer;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+}
+/* this is to style the button*/
+.container .drop .content form .inputs:last-child{
+    width: 120px;
+    background: #22c202;
+    transition: 0.5em;
+    box-shadow: inset 2px 5px 10px rgb(0, 0, 0,0.1),
+    15px 15px 10px rgb(0, 0, 0,0.05),
+    15px 10px 15px rgb(0, 0, 0,0.025);
+}
+
+/* the hover changes the size of the button when clicked*/
+.container .drop .content form .inputs:last-child:hover 
+{
+    width: 150px;
+}
+
+.btn{
+    position: absolute;
+    left: 20%;
+    bottom: 20%;
+    width: 120px;
+    height: 120px;
+    background: #c61dff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    transition: 1.5s;
+    box-shadow:inset 10px 10px 10px rgba(190, 1, 254, 0,0.05),
+    15px 25px 10px rgba(190, 1, 254, 0,0.1),
+    15px 20px 20px rgba(190, 1, 254, 0,0.05),inset -10px -10px 15px rgba(255, 255, 255, 0.5);
+    border-radius: 44% 54% 65% 35% / 57% 54% 42% 43%;
+
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    top: 15px ;
+    left: 30px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+     background: #fff;
+     opacity: 0.45;
+}
+
+ .login{
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    width: 120px;
+    height: 120px ;
+    display: flex;
+    background-color: #ffa500;
+    box-shadow: inset 10px 20px 10px rgba(1,180,255,0.05),
+    15px 25px 10px rgb(1,180,255,0.1),
+    15px 20px 20px rgba(1,180,255,0.1),inset -10px -10px 15px rgba(255, 255, 255, 0.5);
+    transition:1.5s ;
+    border-radius: 44% 54% 65% 35% / 57% 54% 42% 43%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+ .login:hover{
+    border-radius: 50%;
+}
+.btn:hover{
+    border-radius: 50%;
+}
+
+/* credits:tiktok*/
